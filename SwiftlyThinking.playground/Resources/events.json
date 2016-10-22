@@ -1,0 +1,34 @@
+[
+  {
+    "name": "HiTech Swift",
+    "contact": null,
+    "address": {
+      "city": "Toronto",
+      "street": "425 Adelaide St. W"
+    }
+  },
+  {
+    "name": "WWDC",
+    "contact": "Tim Cook",
+    "address": {
+      "city": "San Francisco",
+      "street": "99 Grove St"
+    }
+  },
+  {
+    "name": "Google IO",
+    "contact": "Sergei",
+    "address": {
+      "city": null,
+      "street": null
+    }
+  },
+  {
+    "name": null,
+    "contact": null,
+    "address": {
+      "city": "Toronto",
+      "street": "123 Main St"
+    }
+  }
+]
