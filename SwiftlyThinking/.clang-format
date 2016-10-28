@@ -11,7 +11,7 @@ BraceWrapping:
 IndentWidth: 4
 
 # 118 is the size of the Github code review panel
-ColumnLimit: 118
+ColumnLimit: 80
 
 ObjCSpaceAfterProperty: true
 ObjCSpaceBeforeProtocolList: true

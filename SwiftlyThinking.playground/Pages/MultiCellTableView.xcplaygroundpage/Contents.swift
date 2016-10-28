@@ -34,7 +34,8 @@ class TableViewController: UIViewController, UITableViewDataSource {
         }
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch (indexPath.section, indexPath.row) {
         case (0,0):
             let cell: NameCell = tableView.dequeue(indexPath: indexPath)
@@ -53,7 +54,6 @@ class TableViewController: UIViewController, UITableViewDataSource {
             cell.addressLabel?.text = "Work Address"
             return cell
         default:
-            dump(indexPath)
             fatalError("unsupported code path")
         }
     }

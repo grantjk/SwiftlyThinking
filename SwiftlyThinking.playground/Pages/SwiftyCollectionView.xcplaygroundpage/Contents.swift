@@ -3,14 +3,18 @@
 import UIKit
 import PlaygroundSupport
 
+extension UICollectionViewCell: Reusable {}
+
 class CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = .white
         collectionView?.register(cellType: ImageCell.self)
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(
+        _ collectionView: UICollectionView, 
+        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell: ImageCell = collectionView.dequeue(indexPath: indexPath)
         cell.imageView.image = UIImage(named:"logo.jpg")
         return cell

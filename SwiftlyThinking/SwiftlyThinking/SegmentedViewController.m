@@ -12,7 +12,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[ @"All", @"Filter1", @"Filter2" ]];
+    self.segmentedControl = [[UISegmentedControl alloc]
+        initWithItems:@[ @"All", @"Filter1", @"Filter2" ]];
+
     [self.segmentedControl addTarget:self
                               action:@selector(segmentedControlTapped:)
                     forControlEvents:UIControlEventTouchUpInside];

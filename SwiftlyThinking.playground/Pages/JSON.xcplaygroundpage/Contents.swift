@@ -3,6 +3,7 @@
 import Foundation
 
 extension String: Error {}
+
 struct Address {
     let city: String
     let street: String
@@ -26,7 +27,11 @@ let events1 = json.map { (jsonDict) -> Event? in
             if let street = address["street"] as? String {
                 if let name = jsonDict["name"] as? String {
                     let contact = jsonDict["contact"] as? String
-                    return Event(name: name, location: Address(city: city, street: street), contact: contact)
+                    return Event(
+                        name: name,
+                        location: Address(city: city, street: street),
+                        contact: contact
+                    )
                 }
             }
         }
@@ -45,7 +50,11 @@ let events2 = json.map { (jsonDict) -> Event? in
         let name = jsonDict["name"] as? String else { return nil }
 
     let contact = jsonDict["contact"] as? String
-    return Event(name: name, location: Address(city: city, street: street), contact: contact)
+    return Event(
+        name: name,
+        location: Address(city: city, street: street),
+        contact: contact
+    )
 }
 events2
 

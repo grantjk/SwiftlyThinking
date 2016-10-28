@@ -11,19 +11,73 @@ class ViewController: UITableViewController {
         tableView.register(NameCell.self, forCellReuseIdentifier: "NameCellIdentifier")
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
+//    override func tableView(
+//        _ tableView: UITableView,
+//        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(
+//            withIdentifier: "NameCellIdentifier", for: indexPath)
+//        
+//        cell.titleLabel?.text = "I can write Swift"
+//        return cell
+//    }
+//
+//    override func tableView(
+//        _ tableView: UITableView,
+//        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell: NameCell = tableView.dequeueReusableCell(
+//            withIdentifier: "NameCellIdentifier", for: indexPath)
+//
+//        cell.titleLabel?.text = "I can write Swift"
+//        return cell
+//    }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    override func tableView(
+//        _ tableView: UITableView,
+//        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(
+//            withIdentifier: "NameCellIdentifier", for: indexPath) as NameCell
+//        cell.titleLabel?.text = "I can write Swift"
+//        return cell
+//    }
 
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "NameCellIdentifier", for: indexPath)
-//        let cell: NameCell = tableView.dequeueReusableCell(withIdentifier: "NameCellIdentifier", for: indexPath)
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "NameCellIdentifier", for: indexPath) as NameCell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "NameCellIdentifier", for: indexPath) as? NameCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NameCellIdentifier", for: indexPath) as! NameCell
+//    override func tableView(
+//        _ tableView: UITableView,
+//        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+//        let cell = tableView.dequeueReusableCell(
+//            withIdentifier: "NameCellIdentifier", for: indexPath) as? NameCell
+//
+//        cell.titleLabel?.text = "I can write Swift"
+//        return cell
+//    }
+
+//    override func tableView(
+//        _ tableView: UITableView,
+//        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(
+//            withIdentifier: "NameCellIdentifier", for: indexPath) as! NameCell
+//
+//        cell.titleLabel?.text = "I can write Swift"
+//        return cell
+//    }
+
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: NameCell.identifier(), for: indexPath) as! NameCell
+
         cell.titleLabel?.text = "I can write Swift"
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
 }
 
